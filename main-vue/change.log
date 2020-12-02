@@ -1,0 +1,5 @@
+执行命令：
+    npm i qiankun -S
+修改文件：
+    - src/main.js
+    - src/router/index.js

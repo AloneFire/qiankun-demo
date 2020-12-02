@@ -1,0 +1,5 @@
+npm install --save single-spa-angular@3
+
+package.json
+  - "build:single-spa": "ng build --prod --deploy-url http://localhost:4202/",
+  - "serve:single-spa": "ng serve --disable-host-check --port 4201 --deploy-url http://localhost:4202/ --base-href /ng6 --live-reload false"

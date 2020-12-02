@@ -1,0 +1,20 @@
+执行命令:
+    ng add single-spa-angular
+修改文件:
+    tsconfig.app.json
+        - 修改 files 值 src/main.single-spa.ts
+    package.json
+        - 引入依赖 "webpack-merge": "4.2.2" "@angular-builders/custom-webpack": "11.0.0-beta.1"
+    extra-webpack.config.js
+        - 命令自动生成
+    angular.json
+        - 命令自动修改 projects/architect/build/builder 
+        - 命令自动修改 projects/architect/serve/builder 
+        - 增加 projects/architect/build/builder/options/allowedCommonJsDependencies
+    main.single-spa.ts
+        - 命令自动生成
+        - 修改方法 bootstrapFunction 解决 zone.js 引入问题
+        - 增加 lifecycles.unmount 实现 解决 子应用卸载报错
+    single-spa/
+        - 命令自动生成
+        
